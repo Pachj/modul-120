@@ -36,3 +36,37 @@
     transform: rotate(360deg);
   }
 }
+
+.box-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: auto;
+  height: 300px;
+  width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.inner-container {
+  width: 100%;
+}
+
+#output-container {
+  display: flex;
+  justify-content: center;
+}
+
+#output {
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 8px;
+  padding: 4px;
+  width: fit-content;
+  height: fit-content;
+}
