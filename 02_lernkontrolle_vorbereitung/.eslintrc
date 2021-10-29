@@ -1,0 +1,7 @@
+{
+  "extends": ["@imaginary-cloud/react"],
+  // more configuration options here!
+  "rules": {
+    "react/prop-types": [0]
+  }
+}
