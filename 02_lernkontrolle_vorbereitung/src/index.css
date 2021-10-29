@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+form {
+  width: fit-content;
+}
+
+.form {
+  padding: 1.5rem;
+  width: fit-content;
+  margin: 5rem auto auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%);;
+}
+
+.outputContainer {
+  width: fit-content;
+  margin: 5rem auto auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%);;
+  padding: 1.5rem;
+}
