@@ -1,23 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import {useEffect, useState} from "react";
+import {getData} from "./dataservice";
 
 function App() {
+  const [data, setData] = useState([]);
+  const [user, setUser] = useState({results: []});
+
+  useEffect(() => {
+    /*fetch("https://hn.algolia.com/api/v1/search?query=react-fetch")
+      .then((res) => res.json())
+      .then((res) => {
+        setData(res.hits);
+          console.log(res.hits)
+      },
+        (error) => {
+          console.log(error)
+        })*/
+    getData().then((res) => setData(res.hits));
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ul>
+        {data.map((dataset) => {
+          return <li><a href={dataset.url}>{dataset.url}</a></li>
+        })}
+      </ul>
     </div>
   );
 }
